@@ -27,7 +27,7 @@ from pytest import fixture
 def timing(request):
     logging.basicConfig(level=logging.INFO)
     request.started_at = time.time()
-    request.time_to_execute = None
+    # request.time_to_execute = None
 
     def log_time():
         time_to_execute = time.time() - request.started_at

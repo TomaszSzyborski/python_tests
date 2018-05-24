@@ -9,10 +9,16 @@ from assertpy import soft_assertions
 import requests
 
 # helpers
-from timing_pytest import timing
 
-@timing
-def test_request():
+# from timing_pytest import timing
+# use with @timing decorator
+
+from timing_with_fixtures import timing
+# use with timing fixture - as test function parameter
+
+
+# @timing
+def test_request(timing):
     response = requests.get(
         "https://jsonplaceholder.typicode.com/posts/1"
     )
@@ -23,12 +29,12 @@ def test_request():
          .is_equal_to(1))
         (assert_that(response.json(), "response")
          .contains_entry({'id': 1}))
-        # (assert_that(response.json(), "response")
-        #  .contains_entry({'id': 2}))
-        # (assert_that(response.json(), "response")
-        #  .contains_entry({'id': 3}))
-        # (assert_that(response.json(), "response")
-        #  .contains_entry({'id': 8}))
+        (assert_that(response.json(), "response")
+         .contains_entry({'id': 2}))
+        (assert_that(response.json(), "response")
+         .contains_entry({'id': 3}))
+        (assert_that(response.json(), "response")
+         .contains_entry({'id': 8}))
 
 
 if __name__ == '__main__':
