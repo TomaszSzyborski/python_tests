@@ -20,7 +20,7 @@ greenlet==0.4.13
 idna==2.6
 ImageHash==4.0
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 linecache2==1.0.0
 locust==0.8
 lxml==4.2.1
