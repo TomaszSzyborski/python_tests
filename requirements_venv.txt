@@ -35,7 +35,7 @@ pandas==0.23.0
 pbr==4.0.3
 Pillow==5.1.0
 pluggy==0.6.0
-py==1.5.3
+py==1.10.0
 PyAutoGUI==0.9.36
 pycparser==2.18
 PyHamcrest==1.9.0
